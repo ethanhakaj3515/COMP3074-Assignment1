@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="#F5F7FA">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Weekly payroll" android:textColor="#17243A" android:textSize="26sp"
+            android:textStyle="bold" android:paddingBottom="4dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Enter your hours, hourly rate, and tax rate." android:textColor="#52627A"
+            android:textSize="15sp" android:paddingBottom="20dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hours worked" android:textStyle="bold" android:textColor="#17243A" />
+        <EditText android:id="@+id/hoursInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="e.g. 42.5" android:inputType="numberDecimal|numberSigned" android:singleLine="true" android:importantForAutofill="no" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hourly rate" android:textStyle="bold" android:textColor="#17243A" android:layout_marginTop="12dp" />
+        <EditText android:id="@+id/rateInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="e.g. 20.00" android:inputType="numberDecimal|numberSigned" android:singleLine="true" android:importantForAutofill="no" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tax rate (%)" android:textStyle="bold" android:textColor="#17243A" android:layout_marginTop="12dp" />
+        <EditText android:id="@+id/taxInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="e.g. 15" android:inputType="numberDecimal|numberSigned" android:singleLine="true" android:importantForAutofill="no" />
+        <Button android:id="@+id/calculateButton" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Calculate pay" android:layout_marginTop="16dp" />
+        <TextView android:id="@+id/errorText" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="#B3261E" android:textSize="14sp" android:visibility="gone" android:paddingTop="8dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pay breakdown" android:textColor="#17243A" android:textSize="19sp" android:textStyle="bold" android:layout_marginTop="24dp" android:paddingBottom="8dp" />
+        <TextView android:id="@+id/regularPayOutput" style="@style/OutputRow" android:text="Regular pay: —" />
+        <TextView android:id="@+id/overtimeOutput" style="@style/OutputRow" android:text="Overtime pay: —" />
+        <TextView android:id="@+id/totalPayOutput" style="@style/OutputRow" android:text="Total pay: —" android:textStyle="bold" />
+        <TextView android:id="@+id/taxOutput" style="@style/OutputRow" android:text="Tax: —" />
+        <Button android:id="@+id/aboutButton" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="About" android:layout_marginTop="20dp" android:layout_marginBottom="8dp" />
+    </LinearLayout>
+</ScrollView>
